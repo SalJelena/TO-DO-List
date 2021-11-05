@@ -1,0 +1,51 @@
+
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: $color-grey-1;
+    overflow-x: hidden;
+    background-image: url('/assets/images/bckg.png');
+
+    @include respond(phone) {
+        background-color: $color-grey-2;
+    }
+
+    @include respond(tab-land) {
+        background-color: $color-grey-2;
+    }
+
+    @include respond(tab-port) {
+        background-color: $color-grey-2;
+    }
+}
