@@ -26,13 +26,6 @@ $breakpoint argument choices:
   background-position: center;
 }
 
-.wrap {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1400px;
-  padding: 0 20px;
-}
-
 .home__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -320,5 +313,12 @@ body {
   body {
     background-color: #fafaff;
   }
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
 }
 /*# sourceMappingURL=style.css.map */
