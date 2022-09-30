@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo List</title>
+    <title>To Do List</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
-
 <body>
-    <section class="large-wrapper">
-    <div class="wrapper">
-
-        <div class="header">
-            <h2>to do.</h2>
-                <div class="info">
-                    <form class="form">
-                        <input type="text" id="inputText" placeholder="Upisi nesto..." autocomplete="off">
-                        <input type="submit" value="✔" id="add-btn">
-                    </form>
+<section class="home">
+    <div class="wrap">
+        <div class="home__inner">
+            <div class="home__content">
+                <div class="home__content-head">
+                    <h2 class="home__title">to do.</h2>
+                    <div class="home__body">
+                        <form class="home__form form js-form">
+                            <input type="text" id="inputText" class="form__input js-input" placeholder="Type..." autocomplete="off">
+                            <input type="submit" value="✔" id="add-btn" class="form__submit js-submit">
+                        </form>
+                    </div>
                 </div>
+                <div class="home__container">
+                    <div class="home__list list js-list"></div>
+                </div>
+            </div>
         </div>
-    
-        <div class = "container">
-    
-            <div class="list"></div>
-    
-        </div>
-
-
     </div>
 </section>
-
-
 </body>
-
 </html>

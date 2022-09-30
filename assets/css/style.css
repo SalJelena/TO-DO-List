@@ -16,9 +16,24 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 */
-.large-wrapper {
+.home {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 100px 0;
+  background-image: url("/assets/images/bckg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.home__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,13 +43,9 @@ $breakpoint argument choices:
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.wrapper {
+.home__content {
   background: rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -59,7 +70,13 @@ $breakpoint argument choices:
   padding: 40px;
 }
 
-.header {
+@media (max-width: 56.25em) {
+  .home__content {
+    width: 100%;
+  }
+}
+
+.home__content-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,12 +90,18 @@ $breakpoint argument choices:
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 8rem;
+  font-size: 80px;
   margin-bottom: 10px;
+  width: 100%;
+}
+
+.home__body {
+  width: 100%;
 }
 
 .form {
   margin: 10px 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,7 +117,7 @@ $breakpoint argument choices:
           flex-direction: row;
 }
 
-#inputText {
+.form__input {
   padding: 20px;
   border-radius: 5px 0 0 5px;
   -webkit-border-radius: 5px 0 0 5px;
@@ -102,15 +125,15 @@ $breakpoint argument choices:
   -ms-border-radius: 5px 0 0 5px;
   -o-border-radius: 5px 0 0 5px;
   border: none;
-  width: 290px;
+  width: 100%;
   background-color: #ffcdcd;
 }
 
-#inputText:focus, #inputText:active {
+.form__input:focus, .form__input:active {
   outline: none;
 }
 
-#add-btn {
+.form__submit {
   padding: 19px;
   border-radius: 0 5px  5px 0;
   -webkit-border-radius: 0 5px  5px 0;
@@ -121,11 +144,11 @@ $breakpoint argument choices:
   background-color: #ffcdcd;
 }
 
-#add-btn:hover {
+.form__submit:hover {
   cursor: pointer;
 }
 
-.container {
+.home__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,9 +162,14 @@ $breakpoint argument choices:
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
-.div-item {
+.home__list {
+  width: 100%;
+}
+
+.list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,15 +185,15 @@ $breakpoint argument choices:
           flex-direction: row;
   margin: 20px 0;
   font-size: 1.6rem;
+  width: 100%;
 }
 
-.div-item button {
-  margin-left: 100px;
+.list__item button {
   background-color: transparent;
   border: none;
 }
 
-.div-item button:hover {
+.list__item button:hover {
   cursor: pointer;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -174,8 +202,7 @@ $breakpoint argument choices:
   -o-transform: scale(1.2);
 }
 
-.checkbox-inp {
-  margin-right: 100px;
+.list__checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -188,14 +215,23 @@ $breakpoint argument choices:
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.checkbox-inp:active, .checkbox-inp:checked:active {
+.list__checkbox:active, .list__checkbox:checked:active {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.checkbox-inp:checked {
+.list__checkbox:checked {
   background-color: #262d40;
   border: 1px solid #262d40;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
@@ -203,21 +239,21 @@ $breakpoint argument choices:
   color: #99a1a7;
 }
 
-.checkbox-inp:checked:after {
+.list__checkbox:checked:after {
   content: '\2714';
   font-size: 13px;
   color: #99a1a7;
 }
 
-.checkbox-inp:hover {
+.list__checkbox:hover {
   cursor: pointer;
 }
 
-.text-todo {
+.list__text {
   margin: 0 20px;
 }
 
-.checked-txt {
+.list__checked-txt {
   text-decoration: line-through;
 }
 
@@ -266,7 +302,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #262d40;
   overflow-x: hidden;
-  background-image: url("/assets/images/bckg.png");
 }
 
 @media (max-width: 37.5em) {
