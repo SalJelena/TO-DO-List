@@ -3,22 +3,22 @@ export let count = 5
 export const data = [
     {
         id: 1,
-        desc: 'Uraditi domaci',
+        desc: 'Do homework',
         done: true,
     },
     {
         id: 2,
-        desc: 'Napraviti rucak',
+        desc: 'Make lunch',
         done: false,
     },
     {
         id: 3,
-        desc: 'Ispeglati ves',
+        desc: 'Do the laundry',
         done: false,
     },
     {
         id: 4,
-        desc: 'Nauciti nizove',
+        desc: 'Practice Arrays in JS',
         done: true,
     },
 ]
